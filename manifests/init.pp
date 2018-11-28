@@ -2,9 +2,11 @@ class cytube (
     String $install_path,
     String $install_user,
 
-    String $mysql_database = $cytube::params::mysql_database,
-    String $mysql_username = $cytube::params::mysql_username,
-    String $mysql_password = $cytube::params::mysql_password,
+    String  $mysql_host     = $cytube::params::mysql_host,
+    Integer $mysql_port     = $cytube::params::mysql_port,
+    String  $mysql_database = $cytube::params::mysql_database,
+    String  $mysql_username = $cytube::params::mysql_username,
+    String  $mysql_password = $cytube::params::mysql_password,
 
     Boolean $use_ffmpeg  = $cytube::params::use_ffmpeg,
     String  $ffprobe_exe = $cytube::params::ffprobe_exe,
@@ -35,7 +37,7 @@ class cytube (
     }
 
     # Install node.js libraries
-    nodejs::npm { 'cytube':
+    nodejs::npm { 'cytube-node-deps':
         target           => $install_path,
         user             => $install_user,
         home_dir         => "/home/${install_user}/.npm",

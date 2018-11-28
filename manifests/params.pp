@@ -1,4 +1,6 @@
 class cytube::params {
+    $mysql_host     = 'localhost'
+    $mysql_port     = 3306
     $mysql_database = 'cytube3'
     $mysql_username = 'cytube3'
     $mysql_password = 'cytube3'
