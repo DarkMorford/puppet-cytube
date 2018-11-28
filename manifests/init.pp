@@ -3,19 +3,24 @@ class cytube (
     String $install_path,
     String $install_user,
 
-    String  $mysql_host     = $cytube::params::mysql_host,
-    Integer $mysql_port     = $cytube::params::mysql_port,
-    String  $mysql_database = $cytube::params::mysql_database,
-    String  $mysql_username = $cytube::params::mysql_username,
-    String  $mysql_password = $cytube::params::mysql_password,
+    String $site_name,
+    String $site_tagline,
 
-    Boolean $use_ffmpeg  = $cytube::params::use_ffmpeg,
-    String  $ffprobe_exe = $cytube::params::ffprobe_exe,
+    String  $mysql_host,
+    Integer $mysql_port,
+    String  $mysql_database,
+    String  $mysql_username,
+    String  $mysql_password,
 
-    Optional[String] $youtube_api = $cytube::params::youtube_api,
-    Optional[String] $twitch_api  = $cytube::params::twitch_api,
-    Optional[String] $mixer_api   = $cytube::params::mixer_api
-) inherits cytube::params {
+    Boolean $use_ffmpeg,
+    String  $ffprobe_exe,
+
+    Boolean $use_email,
+
+    Optional[String] $youtube_api,
+    Optional[String] $twitch_api,
+    Optional[String] $mixer_api
+) {
     # Install prerequisites
     ensure_packages(['build-essential'])
 

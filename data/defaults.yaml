@@ -1,0 +1,18 @@
+---
+cytube::site_name: 'Sync'
+cytube::site_tagline: 'Free, open source synchtube'
+
+cytube::mysql_host: 'localhost'
+cytune::mysql_port: 3306
+cytube::mysql_database: 'cytube3'
+cytube::mysql_username: 'cytube3'
+cytube::mysql_password: 'cytube3'
+
+cytube::use_ffmpeg: false
+cytube::ffprobe_exe: 'ffprobe'
+
+cytube::use_email: false
+
+cytube::youtube_api: ~
+cytube::twitch_api: ~
+cytube::mixer_api: ~
