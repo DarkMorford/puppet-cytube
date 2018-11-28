@@ -1,3 +1,4 @@
+# CyTube default parameters
 class cytube::params {
     $mysql_host     = 'localhost'
     $mysql_port     = 3306

@@ -1,3 +1,4 @@
+# CyTube installer
 class cytube (
     String $install_path,
     String $install_user,
