@@ -32,6 +32,14 @@ class cytube (
         ensure_packages(['ffmpeg'])
     }
 
+    # Prepare SQL database
+    mysql::db { $mysql_database:
+        user     => $mysql_username,
+        password => mysql::password($mysql_password),
+        host     => 'localhost',
+        grant    => 'ALL'
+    }
+
     # Download CyTube from repository
     include git
     vcsrepo { $install_path:
