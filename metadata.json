@@ -1,10 +1,11 @@
 {
-    "name": "cytube",
+    "name": "darkmorford-cytube",
     "version": "0.0.1",
     "author": "Shawn Morford <DarkMorford@Gmail.com>",
     "license": "Apache-2.0",
     "source": "https://github.com/DarkMorford/puppet-cytube.git",
     "project_page": "https://github.com/DarkMorford/puppet-cytube",
+    "summary": "Module to install and manage CyTube sync software",
     "dependencies": [
     ],
     "operatingsystem_support": [
